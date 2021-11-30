@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project>
-    <Version>2.0</Version>
+    <Version>3.0</Version>
     <SupportedRuntimeVersions>
-        <Version number="1.4" />
+        <Version variant="xOffFieldSoilRisk" number="1.2.4" />
     </SupportedRuntimeVersions>
     <Description>A realistic landscape scenario of 2 km x 2 km in Western Germany.</Description>
     <Changelog>
+        <Version number="3.0" date="2021-11-30">
+            <Change author="sascha">Initial git release</Change>
+        </Version>
         <Version number="2.0" date="2020-09-21">
             <Change author="sascha">Initial individual release of the scenario</Change>
         </Version>
