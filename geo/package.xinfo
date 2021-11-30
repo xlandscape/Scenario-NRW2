@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<landscape_package>
+    <meta>
+        <version>2</version>
+        <description>Scenario 2</description>
+        <target_type>10</target_type>
+        <habitat_types>20, 30, 53, 60, 90, 91, 92</habitat_types>
+        <ROI_extent>319876.70440000016, 321878.6944000004, 5702295.0612, 5704301.163799999</ROI_extent>
+    </meta>
+    <base>
+        <base_landscape_geometries>LULC.shp</base_landscape_geometries>
+        <feature_id_attribute>ID</feature_id_attribute>
+        <feature_type_attribute>LULCType_1</feature_type_attribute>
+        <additional_attributes/>
+    </base>
+    <supplementary>
+        <flow_grid deviatingExtent="confirmed">flow.tif</flow_grid>
+        <land_use_raster>lulc.tif</land_use_raster>
+        <analysis_distance_groups>AnalysisBuffer.tif</analysis_distance_groups>
+    </supplementary>
+    <supplementary_shapefiles/>
+</landscape_package>
