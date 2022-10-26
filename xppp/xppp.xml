@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XPPP xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="test.xsd">
+    <PPMCalendars type="list[class]">
+        <PPMCalendar type="class">
+            <TargetCrops type="list[int]" unit="none" scales="global">
+                10
+            </TargetCrops>
+            <ApplicationWindow type="random" dist="application_window" format="MM-DD" unit="1" scales="time/year, space/base_geometry">
+                <ApplicationDateStart type="param/date" scales="global">05-01</ApplicationDateStart>
+                <ApplicationDateEnd type="param/date" scales="global">05-31</ApplicationDateEnd>
+                <ApplicationTimeStart type="param/time" scales="global">08:00</ApplicationTimeStart>
+                <ApplicationTimeEnd type="param/time" scales="global">12:00</ApplicationTimeEnd>
+            </ApplicationWindow>
+            <InCropBuffer type="random" dist="uniform" unit="m" scales="global">
+                <Lower type="param/float" scales="global">0</Lower>
+                <Upper type="param/float" scales="global">0</Upper>
+            </InCropBuffer>
+            <InFieldMargin type="random" dist="uniform" unit="m" scales="global">
+                <Lower type="param/float" scales="global">0</Lower>
+                <Upper type="param/float" scales="global">0</Upper>
+            </InFieldMargin>
+            <MinimumAppliedArea type="random" dist="uniform" unit="m²" scales="global">
+                <Lower type="param/float" scales="global">0</Lower>
+                <Upper type="param/float" scales="global">0</Upper>
+            </MinimumAppliedArea>
+            <Tank type="class">
+                <Products type="list[class]">
+                    <Product type="random" dist="choice" unit="none" scales="time/year, space/base_geometry">
+                        <ChoiceList type="param/list">
+                            <Choice type="param/class">
+                                <Name type="param/str" scales="global">Gazelle</Name>
+                                <Probability type="param/float" scales="global">0.5</Probability>
+                            </Choice>
+                            <Choice type="param/class">
+                                <Name type="param/str" scales="global">Movento</Name>
+                                <Probability type="param/float" scales="global">0.5</Probability>
+                            </Choice>
+                        </ChoiceList>
+                    </Product>
+                </Products>
+            </Tank>
+        </PPMCalendar>
+    </PPMCalendars>
+    <PPPs type="list[class]">
+        <PPP type="class">
+            <Product type="str" unit="none" scales="global">Gazelle</Product>
+            <DaysBetweenApplications type="random" dist="uniform_discrete" unit="d" scales="time/day, space/base_geometry">
+                <Lower type="param/int" scales="global">0</Lower>
+                <Upper type="param/int" scales="global">0</Upper>
+            </DaysBetweenApplications>
+            <Applications type="list[class]">
+                <Application type="class">
+                    <Technology type="random" dist="choice" unit="none" scales="global">
+                        <ChoiceList type="param/list">
+                            <Choice type="param/class">
+                                <Name type="param/str" scales="global">Technology</Name>
+                                <Probability type="param/float" scales="global">1.0</Probability>
+                            </Choice>
+                        </ChoiceList>
+                    </Technology>
+                    <ApplicationRate type="random" dist="normal" unit="g" scales="time/day, space/base_geometry">
+                        <Mean type="param/float" scales="global">250</Mean>
+                        <SD type="param/float" scales="global">5</SD> 
+                    </ApplicationRate>
+                </Application>
+            </Applications>
+        </PPP>
+        <PPP type="class">
+            <Product type="str" unit="none" scales="global">Movento</Product>
+            <DaysBetweenApplications type="random" dist="uniform_discrete" unit="d" scales="time/day, space/base_geometry">
+                <Lower type="param/int" scales="global">21</Lower>
+                <Upper type="param/int" scales="global">25</Upper>
+            </DaysBetweenApplications>
+            <Applications type="list[class]">
+                <Application type="class">
+                    <Technology type="random" dist="choice" unit="none" scales="global">
+                        <ChoiceList type="param/list">
+                            <Choice type="param/class">
+                                <Name type="param/str" scales="global">Technology</Name>
+                                <Probability type="param/float" scales="global">1.0</Probability>
+                            </Choice>
+                        </ChoiceList>
+                    </Technology>
+                    <ApplicationRate type="random" dist="normal" unit="g" scales="time/day, space/base_geometry">
+                        <Mean type="param/float" scales="global">1000</Mean>
+                        <SD type="param/float" scales="global">20</SD> 
+                    </ApplicationRate>
+                </Application>
+                <Application type="class">
+                    <Technology type="random" dist="choice" unit="none" scales="global">
+                        <ChoiceList type="param/list">
+                            <Choice type="param/class">
+                                <Name type="param/str" scales="global">Technology</Name>
+                                <Probability type="param/float" scales="global">1.0</Probability>
+                            </Choice>
+                        </ChoiceList>
+                    </Technology>
+                    <ApplicationRate type="random" dist="normal" unit="g" scales="time/day, space/base_geometry">
+                        <Mean type="param/float" scales="global">1000</Mean>
+                        <SD type="param/float" scales="global">20</SD> 
+                    </ApplicationRate>
+                </Application>
+            </Applications>
+        </PPP>
+    </PPPs>
+    <Technologies type="list[class]">
+        <Technology type="class">
+            <Technology type="str" unit="none" scales="global">Technology</Technology>
+            <DriftReduction type="random" dist="normal" unit="1" scales="global">
+                <Mean type="param/float" scales="global">0.0</Mean>
+                <SD type="param/float" scales="global">0.0</SD> 
+            </DriftReduction>
+        </Technology>
+    </Technologies>
+</XPPP>
