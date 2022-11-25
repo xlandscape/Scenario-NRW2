@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PPPs
+    xmlns="urn:xPPPLandscapeScenarioParametrization"     
+>
+    <PPP>
+        <ProductName>PPP</ProductName>
+        <ActiveSubstance>
+            <ActiveSubstanceName>Lindane</ActiveSubstanceName>
+            <DT50>148</DT50>
+            <KocSoil>477</KocSoil>
+            <FreundlichExponent>0.987</FreundlichExponent>
+        </ActiveSubstance>
+        <ProductLabels>
+            <ProductLabel>
+                <TargetCrops>winter wheat|oat</TargetCrops>
+                <ApplicationTime>always</ApplicationTime>
+                <MaxNoOfApplications>1</MaxNoOfApplications>
+                <MinInCropBuffer>0</MinInCropBuffer>
+                <MinDaysBetweenApplications>0</MinDaysBetweenApplications>
+                <MaxDaysBetweenApplications>8</MaxDaysBetweenApplications>
+                <MinApplicationRate>1000</MinApplicationRate>        
+                <MaxApplicationRate>5000</MaxApplicationRate>
+                <CultivationType>F</CultivationType> <!-- F or G or F/G -->
+                <Pest>leaf miners</Pest>
+                <FormulationType>EC</FormulationType>
+                <ApplicationMethod>spray</ApplicationMethod> <!-- spray or drip irrigation -->
+                <ApplyAt>infestation</ApplyAt> <!-- infestation or bbch xx-xx -->
+                <PreHarvestInterval>8</PreHarvestInterval>
+            </ProductLabel>
+        </ProductLabels>
+    </PPP>
+</PPPs>

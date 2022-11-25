@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Technologies
+    xmlns="urn:xPPPLandscapeScenarioParametrization" 
+>
+    <Technology>
+        <TechnologyName scales="global">Technology</TechnologyName>
+        <DriftReduction type="xppp.NormalDistribution" unit="1" scales="time/year, space/base_geometry">
+            <Mean type="float" scales="global">0.05</Mean>
+            <SD type="float" scales="global">0.001</SD> 
+        </DriftReduction>
+    </Technology>
+</Technologies>

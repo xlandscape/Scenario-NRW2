@@ -4,77 +4,8 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
     xsi:schemaLocation="urn:xPPPLandscapeScenarioParametrization ../../../model/core/components/xppp/xppp.xsd"
 >
-   <PPMCalendars type="list[class]">
-        <PPMCalendar type="class">
-            <TargetCrops type="list[int]" scales="global">
-                10
-            </TargetCrops>
-            <ApplicationSequences type="random" dist="choice" scales="time/year, space/base_geometry">
-                <ChoiceList type="param/list">
-                    <Choice type="param/class">
-                        <ApplicationSequence type="param/list" scales="global">
-                            <Application type="class">
-                                <Tank type="class">
-                                    <Products type="list[str]" scales="other/products">
-                                        Movento
-                                    </Products>
-                                    <ApplicationRates type="list[class]" scales="other/products">
-                                        <ApplicationRate type="random" dist="normal" unit="g/ha" scales="time/day, space/base_geometry">
-                                            <Mean type="param/float" scales="global">1000</Mean>
-                                            <SD type="param/float" scales="global">20</SD> 
-                                        </ApplicationRate>
-                                    </ApplicationRates>
-                                </Tank>
-                                <ApplicationWindow type="random" dist="application_window" format="MM-DD" unit="1" scales="time/year, space/base_geometry">
-                                    <ApplicationDateStart type="param/date" scales="global">05-01</ApplicationDateStart>
-                                    <ApplicationDateEnd type="param/date" scales="global">05-07</ApplicationDateEnd>
-                                    <ApplicationTimeStart type="param/time" scales="global">00:00</ApplicationTimeStart>
-                                    <ApplicationTimeEnd type="param/time" scales="global">23:59</ApplicationTimeEnd>
-                                </ApplicationWindow>
-                                <Technology type="random" dist="choice" scales="global">
-                                    <ChoiceList type="param/list">
-                                        <Choice type="param/class">
-                                            <Name type="param/str" scales="global">Technology</Name>
-                                            <Probability type="param/float" scales="global">1.0</Probability>
-                                        </Choice>
-                                    </ChoiceList>
-                                </Technology>
-                                <InCropBuffer type="random" dist="uniform" unit="m" scales="time/year, space/base_geometry">
-                                    <Lower type="param/float" scales="global">0</Lower>
-                                    <Upper type="param/float" scales="global">5</Upper>
-                                </InCropBuffer>
-                                <InFieldMargin type="random" dist="uniform" unit="m" scales="time/year, space/base_geometry">
-                                    <Lower type="param/float" scales="global">0</Lower>
-                                    <Upper type="param/float" scales="global">5</Upper>
-                                </InFieldMargin>
-                                <MinimumAppliedArea type="random" dist="uniform" unit="m²" scales="time/year, space/base_geometry">
-                                    <Lower type="param/float" scales="global">0</Lower>
-                                    <Upper type="param/float" scales="global">0</Upper>
-                                </MinimumAppliedArea>
-                            </Application>
-                        </ApplicationSequence>
-                        <Probability type="param/float" scales="global">1.0</Probability>
-                    </Choice>
-                </ChoiceList>
-            </ApplicationSequences>
-        </PPMCalendar>
+   <PPMCalendars>
+        <PPMCalendar include="ppmcalendar.xml"/>
     </PPMCalendars>
-    <ProductLabels type="dict[class]">
-        <ProductLabel type="class" id="Movento">
-            <ApplicationTimeStart scales="global">00:00</ApplicationTimeStart>
-            <ApplicationTimeEnd scales="global">23:59</ApplicationTimeEnd>
-            <MaxNoOfApplications type="int" unit="1" scales="global">2</MaxNoOfApplications>
-            <MinInCropBuffer type="float" unit="m" scales="global">5</MinInCropBuffer>
-            <MinDaysBetweenApplications type="int" unit="d" scales="global">14</MinDaysBetweenApplications>
-            <MaxApplicationRate type="float" unit="g/ha" scales="global">1100</MaxApplicationRate>
-        </ProductLabel>
-    </ProductLabels>
-    <Technologies type="dict[class]">
-        <Technology type="class" id="Technology">
-            <DriftReduction type="random" dist="normal" unit="1" scales="time/year, space/base_geometry">
-                <Mean type="param/float" scales="global">0.0</Mean>
-                <SD type="param/float" scales="global">0.0</SD> 
-            </DriftReduction>
-        </Technology>
-    </Technologies>
+    <Technologies include="technologies.xml"/>
 </XPPP>
