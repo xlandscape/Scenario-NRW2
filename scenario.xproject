@@ -16,6 +16,6 @@
     <Content>
         <Item name="weather_mars-97100" target="weather/weather_mars-97100.csv" version="1.3.5" />
         <Item name="LandscapeScenario" target="geo/package.xinfo" version="2" />
-		<Item name="xPPPParameters" target="xppp/xppp.xml" version="2" />
+		<Item name="xCropProtectionParameters" target="xCropProtection/xCropProtection.xml" version="1.0" />
     </Content>
 </Project>

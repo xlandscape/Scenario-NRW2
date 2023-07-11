@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PPMCalendar
-    xmlns="urn:xPPPLandscapeScenarioParametrization" 
+    xmlns="urn:xCropProtectionLandscapeScenarioParametrization" 
 >
     <TemporalValidity scales="time/simulation">
         always
@@ -16,13 +16,13 @@
                         PPP
                     </Products>
                     <ApplicationRates scales="other/products">
-                        <ApplicationRate type="xppp.NormalDistribution" unit="g/ha" scales="time/day, space/base_geometry">
+                        <ApplicationRate type="xCropProtection.NormalDistribution" unit="g/ha" scales="time/day, space/base_geometry">
                             <Mean type="float" scales="global">1000</Mean>
                             <SD type="float" scales="global">20</SD> 
                         </ApplicationRate>
                     </ApplicationRates>
                 </Tank>
-                <ApplicationWindow type="xppp.MonthDaySpan">05-01 to 05-07</ApplicationWindow>
+                <ApplicationWindow type="xCropProtection.MonthDaySpan">05-01 to 05-07</ApplicationWindow>
                 <Technology scales="global">Technology</Technology>
                 <InCropBuffer type="float" unit="m" scales="global">0</InCropBuffer>
                 <InFieldMargin type="float" unit="m" scales="global">0</InFieldMargin>

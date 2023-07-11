@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PPPs
-    xmlns="urn:xPPPLandscapeScenarioParametrization"     
+    xmlns="urn:xCropProtectionLandscapeScenarioParametrization"     
 >
     <PPP>
         <ProductName>PPP</ProductName>

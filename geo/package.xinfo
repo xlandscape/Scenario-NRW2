@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <landscape_package
-    xmlns="urn:xPPPLandscapeScenarioGeoPackage" 
+    xmlns="urn:xCropProtectionLandscapeScenarioGeoPackage" 
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-    xsi:schemaLocation="urn:xPPPLandscapeScenarioGeoPackage ../../../model/variant/package.xsd"
+    xsi:schemaLocation="urn:xCropProtectionLandscapeScenarioGeoPackage ../../../model/variant/package.xsd"
 >
     <meta>
         <version>2</version>
