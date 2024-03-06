@@ -16,13 +16,12 @@
                         PPP
                     </Products>
                     <ApplicationRates scales="other/products">
-                        <ApplicationRate type="xCropProtection.NormalDistribution" unit="g/ha" scales="time/day, space/base_geometry">
-                            <Mean type="float" scales="global">1000</Mean>
-                            <SD type="float" scales="global">20</SD> 
+                        <ApplicationRate type="float" unit="g/ha" scales="global">
+                            1000
                         </ApplicationRate>
                     </ApplicationRates>
                 </Tank>
-                <ApplicationWindow type="xCropProtection.MonthDaySpan">05-01 to 05-07</ApplicationWindow>
+                <ApplicationWindow type="xCropProtection.MonthDaySpan" scales="global">05-01 to 05-07</ApplicationWindow>
                 <Technology scales="global">Technology</Technology>
                 <InCropBuffer type="float" unit="m" scales="global">0</InCropBuffer>
                 <InFieldMargin type="float" unit="m" scales="global">0</InFieldMargin>
