@@ -1,21 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project>
-    <Version>3.0</Version>
-    <SupportedRuntimeVersions>
-        <Version variant="xOffFieldSoilRisk" number="1.2.4" />
-    </SupportedRuntimeVersions>
-    <Description>A realistic landscape scenario of 2 km x 2 km in Western Germany.</Description>
-    <Changelog>
-        <Version number="3.0" date="2021-11-30">
-            <Change author="sascha">Initial git release</Change>
-        </Version>
-        <Version number="2.0" date="2020-09-21">
-            <Change author="sascha">Initial individual release of the scenario</Change>
-        </Version>
-    </Changelog>
-    <Content>
-        <Item name="weather_mars-97100" target="weather/weather_mars-97100.csv" version="1.3.5" />
-        <Item name="LandscapeScenario" target="geo/package.xinfo" version="2" />
-		<Item name="xCropProtectionParameters" target="xCropProtection/xCropProtection.xml" version="1.0" />
-    </Content>
+<Project
+  xmlns="urn:xLandscapeModelScenarioInfo"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="urn:xLandscapeModelScenarioInfo ../../model/core/base/scenario.xsd"
+>
+  <Name>Schematic 100 x 100</Name>
+  <Version>2.4</Version>
+  <SupportedRuntimeVersions>
+    <Version variant="xOffFieldSoilRisk" number="1.5"/>
+  </SupportedRuntimeVersions>
+  <Description>A schematic scenario consisting of a field and an adjacent off-field habitat.</Description>
+  <TemporalExtent>
+    <FromDate>1975-01-01</FromDate>
+    <ToDate>2016-12-31</ToDate>
+  </TemporalExtent>
+  <Changelog>
+    <Version number="2.4" date="2025-12-11">
+      <Addition author="sascha">Repository information</Addition>
+      <Change author="sascha">Updated scenario metadata to current schema</Change>
+      <Change author="sascha">Updated geodata metadata to current schema</Change>
+    </Version>
+    <Version number="2.3" date="2021-12-08">
+      <Change author="sascha">Spell checking</Change>
+    </Version>
+    <Version number="2.2" date="2021-09-08">
+      <Change author="sascha">Restructured package layout</Change>
+      <Change author="sascha">Updated geo-data to version 1.0</Change>
+      <Addition author="sascha">Script for automatic documentation</Addition>
+      <Change author="sascha">Renamed LICENSE.txt to LICENSE</Change>
+      <Change author="sascha">Updated scenario metadata</Change>
+    </Version>
+    <Version number="2.1" date="2020-11-30">
+      <Addition author="sascha">Contacts and acknowledgements in scenario metadata</Addition>
+    </Version>
+    <Version number="2.0" date="2020-09-01">
+      <Addition author="sascha">Initial individual release of the scenario</Addition>
+    </Version>
+  </Changelog>
+  <Content>
+    <Item name="Temperature" target="weather/weather.csv" version="1.3.5"/>
+    <Item name="LandscapeScenario" target="geo/package.xinfo" version="1.1"/>
+  </Content>
+  <Contacts>
+    <Contact>Thorsten Schad - thorsten.schad@bayer.com</Contact>
+    <Contact>Sascha Bub - sascha.bub.ext@bayer.com</Contact>
+  </Contacts>
+  <Acknowledgements>
+    <Acknowledgement>Joachim Kleinmann and Magnus Wang for the Vfs-Mod lookup table</Acknowledgement>
+    <Acknowledgement>MARS 25 km x 25 km gridded weather data for MARS grid cell 97100</Acknowledgement>
+  </Acknowledgements>
 </Project>
