@@ -1,20 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project>
-    <Version>3.0</Version>
-    <SupportedRuntimeVersions>
-        <Version variant="xOffFieldSoilRisk" number="1.2.4" />
-    </SupportedRuntimeVersions>
-    <Description>A realistic landscape scenario of 2 km x 2 km in Western Germany.</Description>
-    <Changelog>
-        <Version number="3.0" date="2021-11-30">
-            <Change author="sascha">Initial git release</Change>
-        </Version>
-        <Version number="2.0" date="2020-09-21">
-            <Change author="sascha">Initial individual release of the scenario</Change>
-        </Version>
-    </Changelog>
-    <Content>
-        <Item name="weather_mars-97100" target="weather/weather_mars-97100.csv" version="1.3.5" />
-        <Item name="LandscapeScenario" target="geo/package.xinfo" version="2" />
-    </Content>
+<Project
+  xmlns="urn:xLandscapeModelScenarioInfo"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="urn:xLandscapeModelScenarioInfo ../../model/core/base/scenario.xsd"
+>
+  <Name>NRW2</Name>
+  <Version>3.0</Version>
+  <SupportedRuntimeVersions>
+    <Version variant="xOffFieldSoilRisk" number="1.2.4"/>
+  </SupportedRuntimeVersions>
+  <Description>A realistic landscape scenario of 2 km x 2 km in Western Germany.</Description>
+  <TemporalExtent>
+    <FromDate>1975-01-01</FromDate>
+    <ToDate>2016-12-31</ToDate>
+  </TemporalExtent>
+  <Changelog>
+    <Version number="3.0" date="2021-11-30">
+      <Change author="sascha">Initial git release</Change>
+    </Version>
+    <Version number="2.0" date="2020-09-21">
+      <Change author="sascha">Initial individual release of the scenario</Change>
+    </Version>
+  </Changelog>
+  <Content>
+    <Item name="weather_mars-97100" target="weather/weather_mars-97100.csv" version="1.3.5"/>
+    <Item name="LandscapeScenario" target="geo/package.xinfo" version="2"/>
+  </Content>
+  <Contacts>
+    <Contact>Thorsten Schad - thorsten.schad@landwerk-ev.de</Contact>
+  </Contacts>
 </Project>
